@@ -1,2 +1,2 @@
 # simpleGames
-simple codes about games
+this is where i write/practice  simple games with c++
