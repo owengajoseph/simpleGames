@@ -1,2 +1,2 @@
 # simpleGames
-this is where i write/practice  simple games with c++
+practicing building games from the learncpp websites quizes.
