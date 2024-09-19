@@ -1,2 +1,3 @@
 # simpleGames
-practicing building games from the learncpp websites quizes.
+
+here i practice building games as i learn c++
