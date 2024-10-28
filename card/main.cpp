@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string_view>
-#include <array>
 #include <vector>
+#include <cstddef>
 struct Card
 {
     enum Rank
@@ -35,18 +35,26 @@ struct Card
 
     Rank rank{};
     Suit suit{};
-
-    friend std::ostream operator<<(std::ostream &out, Card &card)
+    // function to return the intials of the cards
+    friend std::ostream &operator<<(std::ostream &out, Card &card)
     {
-        std::vector rankInitials{"a", "2", "3", "4", "5", "6", "7", "8", "9", "j", "q", "k"};
-        out << rankInitials[card.rank];
+        // how do i return the initials ?
+        std::vector getInitials{
+            "A",
+            "2",
+        };
+        std::vector getSuit{"C", "D", "H"};
+
+        // return two output streams which i did not know
+        out << getInitials[static_cast<std::size_t>(card.rank)] << getSuit[static_cast<std::size_t>(card.suit)];
+
         return out;
     }
 };
 
 int main()
 {
-    Card card{Card::rank_jack, Card::suit_club};
+    Card card{Card::rank_ace, Card::suit_club};
 
     std::cout << card;
 }
